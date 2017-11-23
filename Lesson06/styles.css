@@ -1,11 +1,11 @@
 /*font-family*/
 
 p {
-	font-family: Arial;
+	font-family: Raleway;
 }
 
 h1 {
-	font-family: Georgia;
+	font-family: Indie Flower;
 }
 
 /*font-size*/
@@ -19,7 +19,7 @@ h1 {
 }
 
 p {
-	font-size: 2.0em;
+	font-size: normal;
 }
 
 span {
