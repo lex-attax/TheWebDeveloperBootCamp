@@ -1,12 +1,5 @@
-div {
-    width: 100px;
+img {
+    width: 30%;
     float: left;
-}
-
-#one{
-background-color: red;
-}
-
-#two {
-background-color: purple;
+    margin: 1.66%;
 }
