@@ -10,12 +10,61 @@
 </head>
 
 <body>
-    <h1>Bootstrap Basics</h1>
-    <button class="btn btn-danger btn-xs">CLICK ME!</button>
-    <button class="btn btn-success btn-xs active">CLICK ME!</button>
-    <button class="btn btn-success btn-xs disabled">CLICK ME!</button>
 
-    <a href="http://www.getbootstrap.com" class="btn btn-info btn-lg">Bootstrap Docs</a>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>This is a jumbotron</h1>
+            <p>sdflj lsadjf lkdsfj ldskf ölsf lfsd lfk jsf sdf ljsdf jödlfj slöf sdf ösl jsf
+            </p>
+            <button class="btn btn-success btn-lg">Hi there</button>
+        </div>
+
+        <h1>Bootstrap Basics</h1>
+        <button class="btn btn-danger btn-xs">CLICK ME!</button>
+        <button class="btn btn-success btn-xs active">CLICK ME!</button>
+        <button class="btn btn-success btn-xs disabled">CLICK ME!</button>
+
+        <a href="http://www.getbootstrap.com" class="btn btn-info btn-lg">Bootstrap Docs</a>
+
+        <form>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input"> Check me out
+                </label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+        <form class="form-inline">
+            <label class="sr-only" for="inlineFormInputName2">Name</label>
+            <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInputName2" placeholder="Jane Doe">
+
+            <label class="sr-only" for="inlineFormInputGroupUsername2">Username</label>
+            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                <div class="input-group-addon">@</div>
+                <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Username">
+            </div>
+
+            <div class="form-check mb-2 mr-sm-2 mb-sm-0">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox"> Remember me
+                </label>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+
+    </div>
 </body>
 
 </html>
