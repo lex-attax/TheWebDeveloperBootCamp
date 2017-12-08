@@ -27,7 +27,7 @@ let d = 5
 
 console.log("Print all numbers divisible by 5 AND 3 between 5 and 50")
 while (d <= 50) {
-    if (d % 5 == 0 && d % 3 == 0) {
+    if (d % 5 === 0 && d % 3 === 0) {
         console.log(d)
         
     }
