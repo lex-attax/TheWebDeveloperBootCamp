@@ -10,29 +10,31 @@ app.set("view engine", "ejs")
 // Schema setup
 var campgroundSchema = new mongoose.Schema({
     name: String,
-    image: String
+    image: String,
+    description: String
 })
 
 var Campground = mongoose.model("Campground", campgroundSchema)
 
-// Campground.create(
-//     {
-//         name: "Mountain Goat's rest",
-//         image: "http://photosforclass.com/download/15215548990"
+Campground.create(
+    {
+        name: "Mountain Goat's rest",
+        image: "http://photosforclass.com/download/15215548990",
+        description: "this is a good place to rest, but there are no bathrooms!"
         
-//     }, function(err, campground){
-//         if(err){
-//             console.log(err)
-//         } else {
-//             console.log("newly created campground:")
-//             console.log(campground)
-//         }
-//     })
+    }, function(err, campground){
+        if(err){
+            console.log(err)
+        } else {
+            console.log("newly created campground:")
+            console.log(campground)
+        }
+    })
 
 app.get("/", function(req, res){
     res.render("landing")
 })
-
+// INDEX - show all campgrounds
 app.get("/campgrounds", function(req, res){
         //Get all campgrounds from DB
         Campground.find({}, function(err, allCampgrounds){
@@ -44,6 +46,7 @@ app.get("/campgrounds", function(req, res){
         })
 })
 
+// CREATE - add new campground to DB
 app.post("/campgrounds", function(req, res){
 
     //get data from form and add to campgrunds array
@@ -60,9 +63,15 @@ app.post("/campgrounds", function(req, res){
         }
     })
 })
-
+// NEW - show form to create new campground
 app.get("/campgrounds/new", function(req, res){
     res.render("new.ejs")
+})
+
+app.get("/campgrounds/:id", function(req, res){
+    // find the campground with provided ID
+    // render show template with that campgoround
+    res.send("this will be the show page one day")
 })
 
 app.listen(process.env.PORT, process.env.IP, function(){
