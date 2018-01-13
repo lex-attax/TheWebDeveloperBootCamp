@@ -37,19 +37,19 @@ Campground.remove({}, function(err){
                 // create a comment
                 Comment.create(
                     {
-                        text:"This place is great, but I wish there was internet"
+                        text:"This place is great, but I wish there was internet",
                         author:"Homer"
                     }, function(err, comment){
                         if(err){
                             console.log(err)
-                        } eles {
+                        } else {
                         campground.comments.push(comment)
                         campground.save()
                         console.log("Created new comment")
                         }
                     })
             }
-    
+        
         })
     })
     }
