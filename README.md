@@ -8,3 +8,6 @@ Installation:
 
 For Flash Messages:
 npm install --save connect-flash
+
+For Nodemon (No Server restart after changes needed):
+npm install -g nodemon
