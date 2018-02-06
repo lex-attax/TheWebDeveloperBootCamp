@@ -15,16 +15,18 @@ var express     = require("express"),
 var commentRoutes = require("./routes/comments"),
     campgroundRoutes = require("./routes/campgrounds"),
     indexRoutes = require("./routes/index")
-    
-//mongoose.connect("mongodb://localhost/yelp_camp")
-mongoose.connect("mongodb://lex:attax@ds125938.mlab.com:25938/yelpcamp")
+
+var url =  process.env.DATABASEURL || "mongodb://localhost/yelp_camp"
+mongoose.connect("url")
+
 app.use(bodyParser.urlencoded({extended: true}))
 app.set("view engine", "ejs")
 app.use(express.static(__dirname + "/public"))
 app.use(methodOverride("_method"))
 app.use(flash())
 
-//seedDB()  //seed the database   
+//seed the database:
+//seedDB()  
     
 // passport configuration
 app.use(require("express-session")({
